@@ -43,7 +43,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         return
     }else{
         //DO SOME LOGIC
-        document.getElementById('pilotStatus').innerHTML += `: Pilot Name:: ${pilot.value}`
+        document.getElementById('pilotStatus').innerHTML = `Pilot Ready: Pilot Name:: ${pilot.value}`
     }
     if(validateInput(copilot) === 'Empty'){
         alert('Co Pilot is required input');
@@ -57,7 +57,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         return
     }else{
         //DO SOME LOGIC
-        document.getElementById('copilotStatus').innerHTML += `: Pilot Name:: ${copilot.value}`
+        document.getElementById('copilotStatus').innerHTML = `Co-pilot Ready: Pilot Name:: ${copilot.value}`
 
     }
 
@@ -66,7 +66,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         if(fuelLevel.value >= 10000 && cargoLevel.value <= 10000){
             this.document.getElementById('faultyItems').style.visibility = "visible";
             this.document.getElementById('launchStatus').style.color = "green";
+            this.document.getElementById('launchStatus').innerHTML = `Shuttle is ready for Launch`;
+
         }
+        
     }
 
     if(validateInput(fuelLevel) === 'Is a Number'){

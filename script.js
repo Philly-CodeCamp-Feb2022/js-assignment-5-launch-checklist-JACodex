@@ -5,9 +5,7 @@
 window.addEventListener("load", function(event) {
    console.log('in loaded')
 //    console.log(document)
-   let listedPlanets = ['Mercury', 'Venus', 'Earth', 'Mars'];
-   let fuelLevel = 0;
-   let cargoMass = 0;
+   let listedPlanets;
    let form = document.querySelector('form')
    let pilotNameInput = document.querySelector("input[name=pilotName]");
    let coPilotNameInput = document.querySelector("input[name=copilotName]");
